@@ -5,6 +5,50 @@ import static org.lwjgl.opengl.GL30.*;
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.system.MemoryUtil.*;
 
+class Grid {
+    int width = 64;
+    int height = 64;
+    Cell Cells[][];
+
+    public Grid(int width, int height) {
+       this.width = width;
+       this.height = height;
+    }
+
+    private void drawGrid() {
+        for (int x = 0; x < this.width; x++) {
+           for (int y = 0; y < this.height; y++) {
+               // TODO: Draw cell
+           }
+        }
+    }
+}
+
+class Cell {
+    // false being dead, and true - alive
+    private boolean state;
+    private int x;
+    private int y;
+
+    public Cell(boolean state) {
+        this.state = state;
+    }
+
+    public void changeState(boolean newState) {
+        this.state = newState;
+    }
+
+    public int[] getPosition() {
+        return new int[]{this.x, this.y};
+    }
+
+    public boolean getState() {
+        return this.state;
+    }
+}
+
+
+// TODO: Add a grid
 public class Main {
     private static long createWindow() {
         if (!glfwInit()) {

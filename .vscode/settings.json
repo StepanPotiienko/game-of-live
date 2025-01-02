@@ -1,0 +1,5 @@
+{
+    "terminal-keeper.killProcess": false,
+    "terminal-keeper.wslSupport": false,
+    "terminal-keeper.quickRun": true
+}

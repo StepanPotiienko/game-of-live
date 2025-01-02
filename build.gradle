@@ -6,7 +6,6 @@ repositories {
 }
 
 dependencies {
-
 	implementation "org.lwjgl:lwjgl"
 	implementation "org.lwjgl:lwjgl-assimp"
 	implementation "org.lwjgl:lwjgl-bgfx"
